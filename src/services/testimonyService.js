@@ -7,7 +7,7 @@ export const getAllTestimonial = async () => {
       }
     }
   
-    const response = await fetch(`${process.env.REACT_APP_HOST}/testimonials`, requestData);
+    const response = await fetch(`${process.env.REACT_APP_HOST}/api/testimonials`, requestData);
     if(!response.ok) {
       throw({message: response.statusText, status: response.status}); //eslint-disable-line
     }
