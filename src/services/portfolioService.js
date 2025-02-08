@@ -6,7 +6,7 @@ export const getAllPortfolio = async () => {
         "Content-Type": "application/json"
       }
     }
-    const response = await fetch(`${process.env.REACT_APP_HOST}/444/portfolios`, requestData);
+    const response = await fetch(`${process.env.REACT_APP_HOST}/portfolios`, requestData);
     if(!response.ok) {
       throw({message: response.statusText, status: response.status}); //eslint-disable-line
     }
