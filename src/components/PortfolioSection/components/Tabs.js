@@ -1,15 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { getAllPortfolio } from "../../../services";
 import { TabCard } from "./TabCard";
 
 export const Tabs = ({activeTab, handleFilterTab}) => {
   const [categories, setCategories] = useState([]);
-  const [position, setPosition] = useState({
-    left: 0,
-    width: 0,
-    opacity: 0,
-  });
 
   const fetchAllProtFolio = async () => {
     try {

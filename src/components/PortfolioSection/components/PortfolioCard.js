@@ -8,10 +8,11 @@ export const PortfolioCard = ({index, portfolio}) => {
 
   return (
     <div className="card flex flex-col md:flex-row items-center justify-between my-20 md:my-28 gap-32 md:gap-0">
-      <div target="_blank" className={`image-col flex-1 relative w-full after:absolute top-1/2 after:content-[""] after:h-[1px] md:after:w-1/2 after:bg-gradient-to-br after:from-sky-600 after:to-blue-800 after:inline-block after:invisible after:md:visible before:inline-block before:absolute before:content-[""] before:w-3 before:h-3 before:bg-white dark:before:bg-slate-900 before:bg-opacity-100 before:border-2 before:border-sky-600 before:rounded-full before:hover:scale-125 before:transition before:z-10 before:invisible before:md:visible flex items-center justify-center ${index % 2 === 0 ? "md:order-1  after:-left-0 md:after:-left-5 before:-left-[6px] md:before:-left-[26px] md:justify-end" : "after:-right-0 md:after:-right-5 before:-right-[6px] md:before:-right-[26px] md:justify-start"}`}>
+      <div className={`image-col flex-1 relative w-full after:absolute top-1/2 after:content-[""] after:h-[1px] md:after:w-1/2 after:bg-gradient-to-br after:from-sky-600 after:to-blue-800 after:inline-block after:invisible after:md:visible before:inline-block before:absolute before:content-[""] before:w-3 before:h-3 before:bg-white dark:before:bg-slate-900 before:bg-opacity-100 before:border-2 before:border-sky-600 before:rounded-full before:hover:scale-125 before:transition before:z-10 before:invisible before:md:visible flex items-center justify-center ${index % 2 === 0 ? "md:order-1  after:-left-0 md:after:-left-5 before:-left-[6px] md:before:-left-[26px] md:justify-end" : "after:-right-0 md:after:-right-5 before:-right-[6px] md:before:-right-[26px] md:justify-start"}`}>
         <a 
           href={portfolio.url} 
-          target="_blank"
+          target={"_blank"}
+          rel="noreferrer noopener"
           className="w-fit relative pointer-events-none md:pointer-events-auto"
           onMouseEnter={ () =>  setTooltipToggle(true)} 
           onMouseLeave={ () =>  setTooltipToggle(false)} 

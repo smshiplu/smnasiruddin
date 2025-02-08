@@ -1,7 +1,4 @@
-import { useRef } from "react";
-
 export const TabCard = ({category, index, activeTab, handleFilterTab}) => {
-  const ref = useRef(null);
   return (
     <li>
       <button

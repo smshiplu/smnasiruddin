@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 export const ScrollButton = ({forwardedRef}) => {
   const handleScrollTo = () => {
     if(forwardedRef.current) {
