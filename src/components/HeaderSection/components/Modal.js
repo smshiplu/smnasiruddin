@@ -81,7 +81,7 @@ export const Modal = ({ isOpen, setIsOpen }) => {
               </div>
               <div className="imgCol w-full md:w-[50%]">
                 <div className="w-48 h-48 mx-auto rounded-full text-center border border-gray-600 shadow-xl flex items-center justify-center object-cover self-center overflow-hidden">
-                  <img src="assets/people/my-pic-02.jpg" alt="SM Nasir Uddin Shiplu" />
+                  <img src="assets/people/my-pic-02.jpg" alt="SM Nasir Uddin" />
                 </div>
               </div>
             </div>

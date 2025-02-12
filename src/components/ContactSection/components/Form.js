@@ -117,7 +117,7 @@ export const Form = () => {
     <>
     {isLoading && <Loader/>}
     <div style={{ backgroundImage: `url('${bgImage}')`,  }} className="w-full bg-no-repeat bg-container md:bg-[-200px] bg-center  flex flex-col md:flex-row items-center justify-center lg:justify-end my-10">
-      <form ref={form} onSubmit={handleSendEmail} name="sendEmailForm" className="flex flex-col gap-6 w-full md:w-[600px] dark:bg-slate-900/90 bg-gray-50/80">
+      <form ref={form} onSubmit={handleSendEmail} name="sendEmailForm" className="flex flex-col gap-6 w-full md:w-[600px] dark:bg-slate-900/90  p-1 rounded-lg">
         <div className="inputGroup">
           <label htmlFor="name" className="flex items-center justify-start gap-1 mb-2 text-sm font-medium text-gray-900 dark:text-white ">
             <MdOutlinePerson4 className="text-xl" />
@@ -141,8 +141,7 @@ export const Form = () => {
           </label>
           <textarea name="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
         </div>
-        
-        <button type="submit" className="text-white bg-[#1788ae] hover:text-white border-2 border-blue-700 hover:bg-gradient-to-tr hover:from-sky-600 hover:to-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-white dark:hover:text-white dark:hover:gradient-to-br dark:hover:from-sky-600 to dark:hover:to-blue-800  dark:focus:ring-blue-800 block">
+        <button type="submit" className="text-sm px-5 py-2.5 text-center font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-sky-600 to-blue-800 group-hover:from-sky-600 group-hover:to-blue-800 hover:bg-gradient-to-tr hover:from-blue-800 hover:to-sky-600 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-800 transition-all ">
           <IoIosSend className="inline-block mr-1 text-lg"/>
           <span>Send Message</span>
         </button>
