@@ -26,7 +26,7 @@ export const Modal = ({ isOpen, setIsOpen }) => {
             animate={{ scale: 1, rotate: "0deg" }}
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-gradient-to-br from-gray-900 to-slate-800 text-white p-4 md:p-6 mt-0 md:mt-0 rounded-lg w-full shadow-xl cursor-default relative overflow-hidden overflow-y-auto"
+            className="bg-gradient-to-br from-gray-900 to-slate-800 text-white p-4 md:p-6 mt-40 md:mt-0 rounded-lg w-full shadow-xl cursor-default relative overflow-hidden overflow-y-auto"
           >
             <motion.button
               initial= {{ rotate: 0, scale: 1 }}
