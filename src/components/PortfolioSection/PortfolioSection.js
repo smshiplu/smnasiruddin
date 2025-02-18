@@ -46,7 +46,7 @@ export const PortfolioSection = () => {
 
   return (
   <>
-    <Loader isLoading={isLoading} />
+    {isLoading && <Loader />}
     <section className="max-w-screen-xl mx-auto w-full relative p-4 pt-0 bg-white text-gray-900 dark:bg-gray-900 dark:text-white overflow-hidden">
         <h2 className="text-2xl sm:text-4xl font-semibold dark:text-white text-center border-2 border-blue-600 rounded-lg  rounded-t-none border-t-0 max-w-xs mx-auto py-4">Latest Works</h2>
         <Tabs 

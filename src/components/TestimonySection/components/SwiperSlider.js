@@ -38,8 +38,7 @@ export const SwiperSlider = () => {
 
   return (
   <>
-    {/* {isLoading && <Loader isLoading={isLoading} />} */}
-    <Loader isLoading={isLoading} />
+    {isLoading && <Loader />}
     <Swiper
       spaceBetween={300}
       centeredSlides={true}
