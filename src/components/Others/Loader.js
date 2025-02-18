@@ -1,9 +1,23 @@
 import {motion} from "framer-motion";
-export const Loader = () => {
+import { useEffect } from "react";
+export const Loader = ({isLoading}) => {
+  
+  useEffect(() => {
+    if(isLoading) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+    }
+  }, [isLoading]);
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center">
+    // <div className="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center h-screen overflow-hidden">
+    //   <BarLoader />
+    // </div>
+    <>
+      {isLoading && (<div className="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center h-screen overflow-hidden">
       <BarLoader />
-    </div>
+      </div>)}
+    </>
   );
 }
 
