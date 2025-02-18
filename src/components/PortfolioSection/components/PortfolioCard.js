@@ -27,7 +27,7 @@ export const PortfolioCard = ({index, portfolio}) => {
 
           <div className={`z-30 max-w-48 px-3 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-700 rounded-lg opacity-100 visible md:opacity-0 md:invisible flex items-center justify-center flex-col absolute left-1/2 -bottom-20  -translate-y-1/2  -translate-x-1/2 shadow pointer-events-auto`}>
             <div className="flex items-center justify-between flex-row gap-2">
-              <span className="inline-block line-clamp-1">{portfolio.title}</span>
+              <span className="inline-block line-clamp-1 text-ellipsis whitespace-nowrap">{portfolio.title}</span>
               <MdOpenInNew />
             </div>
             <RxTriangleDown className="absolute -bottom-[8px] text-gray-900 dark:text-gray-700" />
