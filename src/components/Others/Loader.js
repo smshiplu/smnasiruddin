@@ -10,9 +10,6 @@ export const Loader = ({isLoading}) => {
     }
   }, [isLoading]);
   return (
-    // <div className="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center h-screen overflow-hidden">
-    //   <BarLoader />
-    // </div>
     <>
       {isLoading && (<div className="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center h-screen overflow-hidden">
       <BarLoader />
