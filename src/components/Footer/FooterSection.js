@@ -22,7 +22,7 @@ export const FooterSection = () => {
   }
 
   return (
-    <section className="max-w-screen-xl mx-auto w-full relative p-4 pt-0 bg-white text-gray-900 dark:bg-gray-900 dark:text-white overflow-hidden flex flex-col items-center justify-center gap-2">
+    <footer className="max-w-screen-xl mx-auto w-full relative p-4 pt-0 bg-white text-gray-900 dark:bg-gray-900 dark:text-white overflow-hidden flex flex-col items-center justify-center gap-2">
       <p className="text-xs text-sky-800">SM Nasir Uddin © {year}</p>
       <button onClick={scrollToTop}>
         <svg xmlns="http://www.w3.org/2000/svg" className="w-16" viewBox="0 0 573.178 478.468" >
@@ -42,6 +42,6 @@ export const FooterSection = () => {
       </button>
       {/* <ScrollToTop /> */}
       <SocialIcons className={className}/>
-    </section>
+    </footer>
   )
 }

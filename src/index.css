@@ -10,3 +10,13 @@
     display: none;
   }
 }
+
+.tawk-card:nth-child(1) {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tawk-chatinput-container {
+  visibility: hidden;
+}

@@ -17,7 +17,7 @@ export const SocialIcons = ({ className }) => {
         <a href="/" target="_blank"><FaRegEnvelope className={`${twMerge(className.icon)} w-7 h-7 `}/></a>
       </li>
       <li>
-        <a href="https://github.com/smshiplu" target="_blank"><FaGithubAlt className={`${twMerge(className.icon)} w-7 h-7 `}/></a>
+        <a href="https://github.com/smshiplu" rel="noreferrer" target="_blank"><FaGithubAlt className={`${twMerge(className.icon)} w-7 h-7 `}/></a>
       </li>
     </ul>
   )

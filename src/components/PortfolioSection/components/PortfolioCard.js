@@ -17,7 +17,7 @@ export const PortfolioCard = ({index, portfolio}) => {
           onMouseEnter={ () =>  setTooltipToggle(true)} 
           onMouseLeave={ () =>  setTooltipToggle(false)} 
         > 
-          <div className={`tooltip z-30 max-w-48 px-3 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-700 rounded-lg opacity-0 invisible md:opacity-100 md:visible flex items-center justify-center flex-col absolute left-1/2  -translate-y-1/2  -translate-x-1/2 shadow ${tooltipToggle ? "md:-top-10 md:visible md:opacity-100" : "md:top-1/2 md:invisible md:opacity-0"} transition-all`}>
+          <div className={`tooltip z-30 max-w-68 px-3 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-700 rounded-lg opacity-0 invisible md:opacity-100 md:visible flex items-center justify-center flex-col absolute left-1/2  -translate-y-1/2  -translate-x-1/2 shadow ${tooltipToggle ? "md:-top-10 md:visible md:opacity-100" : "md:top-1/2 md:invisible md:opacity-0"} transition-all`}>
             <div className="flex items-center justify-between flex-row gap-2">
               <span className="inline-block line-clamp-1 text-ellipsis whitespace-nowrap">{portfolio.title}</span>
               <MdOpenInNew />
@@ -25,7 +25,7 @@ export const PortfolioCard = ({index, portfolio}) => {
             <RxTriangleDown className="absolute -bottom-[8px] text-gray-900 dark:text-gray-700" />
           </div>
 
-          <div className={`z-30 max-w-48 px-3 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-700 rounded-lg opacity-100 visible md:opacity-0 md:invisible flex items-center justify-center flex-col absolute left-1/2 -bottom-20  -translate-y-1/2  -translate-x-1/2 shadow pointer-events-auto`}>
+          <div className={`z-30 max-w-68 px-3 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-gray-700 rounded-lg opacity-100 visible md:opacity-0 md:invisible flex items-center justify-center flex-col absolute left-1/2 -bottom-20  -translate-y-1/2  -translate-x-1/2 shadow pointer-events-auto`}>
             <div className="flex items-center justify-between flex-row gap-2">
               <span className="inline-block line-clamp-1 text-ellipsis whitespace-nowrap">{portfolio.title}</span>
               <MdOpenInNew />
