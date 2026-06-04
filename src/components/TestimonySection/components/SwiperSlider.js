@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigation, Pagination, A11y, EffectCoverflow } from 'swiper/modules';
+import { A11y, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { getAllTestimonial } from '../../../services';
+import { getAllData } from '../../../services';
 import { selectTestimonials, SET_TESTIMONY_DATA } from '../../../store/testimonySlice/testimonySlice';
 import { Loader } from "../../Others/Loader";
 
@@ -17,12 +17,11 @@ export const SwiperSlider = () => {
 
   useEffect(() => {
     const getTestimonials = async () => {
-      
       try {
         setIsLoading(true);
         if(testimonials.length < 1) {
-          const data = await getAllTestimonial();
-          dispatch(SET_TESTIMONY_DATA(data));
+          const data = await getAllData();
+          dispatch(SET_TESTIMONY_DATA(data.testimonials));
           setIsLoading(false);
         } else {
           setIsLoading(false);

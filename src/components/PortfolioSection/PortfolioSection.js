@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { getAllData } from "../../services";
+import { selectPortfolios, SET_PORTFOLIO_DATA } from "../../store/portfolioSlice/portfolioSlice";
+import { Loader } from "../Others/Loader";
 import { PortfolioCard } from "./components/PortfolioCard";
 import { Tabs } from "./components/Tabs";
-import { getAllPortfolio } from "../../services";
-import { SET_PORTFOLIO_DATA, selectPortfolios } from "../../store/portfolioSlice/portfolioSlice";
-import { Loader } from "../Others/Loader";
+
 
 export const PortfolioSection = () => {
   const dispatch = useDispatch();
@@ -19,9 +20,8 @@ export const PortfolioSection = () => {
       try {
         setIsLoading(true);
         if(portfolioData.length < 1) {
-          const data = await getAllPortfolio();
-          const temp = data.slice(1);
-          dispatch(SET_PORTFOLIO_DATA(temp));
+          const data = await getAllData();
+          dispatch(SET_PORTFOLIO_DATA(data.portfolios.slice(1)));  //slice(1) remove first item that contains "category all"
           setIsLoading(false);
         } else {
           setPortfolios(portfolioData);
@@ -36,13 +36,17 @@ export const PortfolioSection = () => {
   }, [dispatch, portfolioData]) //eslint-disable-line
 
   const handleFilterTab = (choice, idx) => {
-    if(choice !== "All") {
-      setPortfolios(portfolioData.filter(item => item.category === choice));
+    console.log(choice);
+    
+    if(choice !== "all") {
+      const filteredCategories = portfolioData.filter(item => item.category.includes(choice));
+      setPortfolios(filteredCategories);
     } else {
       setPortfolios(portfolioData);
     }
     setActiveTab(idx)
   }
+  
 
   return (
   <>
@@ -53,6 +57,7 @@ export const PortfolioSection = () => {
           activeTab={activeTab}
           handleFilterTab={handleFilterTab}
         />
+        
         <div className="cards mt-10 lg:mt-16">
           {portfolios && portfolios.map((portfolio, index) => (
             <PortfolioCard 

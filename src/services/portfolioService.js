@@ -7,6 +7,7 @@ export const getAllPortfolio = async () => {
       }
     }
     const response = await fetch(`${process.env.REACT_APP_HOST}/api/portfolios`, requestData);
+    
     if(!response.ok) {
       throw({message: response.statusText, status: response.status}); //eslint-disable-line
     }

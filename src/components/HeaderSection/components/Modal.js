@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { SiMongodb, SiExpress, SiReact, SiNodedotjs   } from "react-icons/si";
+import { SiExpress, SiMongodb, SiNodedotjs, SiReact } from "react-icons/si";
 import { Tooltip } from "./Tooltip";
 
 const mern = [
@@ -52,6 +52,7 @@ export const Modal = ({ isOpen, setIsOpen }) => {
                 <ul className="flex flex-wrap items-center text-sm text-gray-300 gap-2">
                   <li className="py-1 px-2 rounded-full border border-gray-700">#javascript</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#react.js</li>
+                  <li className="py-1 px-2 rounded-full border border-gray-700">#next.js</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#redux</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#node.js</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#express.js</li>
@@ -63,13 +64,10 @@ export const Modal = ({ isOpen, setIsOpen }) => {
                   <li className="py-1 px-2 rounded-full border border-gray-700">#css</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#sass</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#bootstrap</li>
-                  <li className="py-1 px-2 rounded-full border border-gray-700">#tailwind</li>
+                  <li className="py-1 px-2 rounded-full border border-gray-700">#tailwindcss</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#git</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#github</li>
-                  <li className="py-1 px-2 rounded-full border border-gray-700">#aws</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#terminal</li>
-                  <li className="py-1 px-2 rounded-full border border-gray-700">#adobeXD</li>
-                  <li className="py-1 px-2 rounded-full border border-gray-700">#figma</li>
                 </ul>
                 <h2 className="text-2xl text-center md:text-left font-semibold text-blue-500 my-10">MERN STACK</h2>
                 <ul className="w-full flex items-center justify-center md:justify-start gap-9">

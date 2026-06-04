@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
-import { ScrollButton } from "./components/ScrollButton";
+import { Nav } from "./components/Nav";
 import { ParticleAnimation } from "./components/ParticleAnimation";
+import { ScrollButton } from "./components/ScrollButton";
 
 export const HeaderSection = () => {
   const headerSecRef = useRef(null);
@@ -15,8 +15,8 @@ export const HeaderSection = () => {
   return (
     <header 
       ref={headerSecRef} 
-      style={{height: "100vh", height: "calc(var(--vh, 1vh) * 100)"}}
-      className="hero flex flex-col justify-between p-4 scroll-smooth relative bg-slate-900 text-white">
+      style={{ height: "calc(var(--vh, 1vh) * 100)"}}
+      className="hero flex flex-col justify-between p-4 scroll-smooth relative bg-slate-900 text-white h-screen">
       <Nav/>
       <Hero />
       <ScrollButton forwardedRef={headerSecRef} />
