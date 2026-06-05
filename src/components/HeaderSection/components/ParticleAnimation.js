@@ -1,6 +1,5 @@
-import { useEffect, useRef } from "react";
 import Matter from "matter-js";
-import MatterAttractors from "matter-attractors";
+import { useEffect, useRef } from "react";
 
 export const ParticleAnimation = () => {
   const canvasWrapperRef = useRef(null);
@@ -27,8 +26,7 @@ export const ParticleAnimation = () => {
         Body = Matter.Body,
         Mouse = Matter.Mouse,
         Common = Matter.Common,
-        Composite = Matter.Composite,
-        Composites = Matter.Composites,
+        // Composite = Matter.Composite,
         Bodies = Matter.Bodies;
     
       // create engine
@@ -131,7 +129,7 @@ export const ParticleAnimation = () => {
     
         World.add(world, circle);
     
-        var circle = Bodies.circle(x, y, Common.random(2, 20), {
+        circle = Bodies.circle(x, y, Common.random(2, 20), {
           mass: 6,
           friction: 0,
           frictionAir: 0,
@@ -144,7 +142,7 @@ export const ParticleAnimation = () => {
     
         World.add(world, circle);
     
-        var circle = Bodies.circle(x, y, Common.random(2, 30), {
+        circle = Bodies.circle(x, y, Common.random(2, 30), {
           mass: 0.2,
           friction: 0.6,
           frictionAir: 0.8,

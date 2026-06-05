@@ -1,6 +1,5 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { SocialIcons } from "../Others/SocialIcons";
-import ScrollToTop from "./components/ScrollToTop";
 
 export const FooterSection = () => {
   const [year, setYear] = useState(null);
