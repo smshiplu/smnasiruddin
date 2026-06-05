@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { Bounce, ToastContainer } from 'react-toastify';
 
 import { Provider } from 'react-redux';
-import store from './store/store';
+import 'react-toastify/dist/ReactToastify.css';
 import App from './App';
 import './index.css';
-import 'react-toastify/dist/ReactToastify.css';
+import store from './store/store';
 
 
 
@@ -24,7 +24,7 @@ root.render(
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme="dark"
         transition={Bounce}
       />
       <App />
