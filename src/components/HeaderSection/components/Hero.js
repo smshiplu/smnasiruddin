@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SocialIcons } from "../../Others/SocialIcons";
 import { Modal } from "./Modal";
 
@@ -10,6 +10,14 @@ export const Hero = () => {
     ul: "absolute top-1/2 -translate-y-1/2 right-0 space-y-6 pointer-events-auto z-10",
     icon: "text-gray-300 hover:text-white"
   }
+  useEffect(function stopBgScrollWhileModalOpen() {
+    if(isOpen) {
+        document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOpen]);
+
 
   return (
     <div className='middle hero relative pointer-events-none'>
