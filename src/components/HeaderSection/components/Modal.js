@@ -26,7 +26,7 @@ export const Modal = ({ isOpen, setIsOpen }) => {
             animate={{ scale: 1, rotate: "0deg" }}
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-gradient-to-br from-gray-900 to-slate-800 text-white p-4 md:p-6 mt-40 md:mt-0 rounded-lg w-full shadow-xl cursor-default relative overflow-hidden overflow-y-auto"
+            className="bg-gradient-to-br from-gray-900 to-slate-800 text-white rounded-lg w-full shadow-xl cursor-default relative overflow-hidden overflow-y-auto box-border h-dvh py-10"
           >
             <motion.button
               initial= {{ rotate: 0, scale: 1 }}
@@ -48,8 +48,8 @@ export const Modal = ({ isOpen, setIsOpen }) => {
             <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 px-0 md:px-10 lg:px-40">
               <div className="textCol md:w-[50%] pr-0 lg:pr-20">
                 <h2 className="text-2xl text-center md:text-left font-semibold text-blue-500">ABOUT ME</h2>
-                <p className="py-6 text-justify">I help busy web developers and business owners create visually appealing and useful websites that complement their vision and draw in visitors, making them want to stay longer. I use state-of-the-art tools and technology to make these outstanding websites come to life.</p>
-                <ul className="flex flex-wrap items-center text-sm text-gray-300 gap-2">
+                <p className="my-6 text-justify">I help busy web developers and business owners create visually appealing and useful websites that complement their vision and draw in visitors, making them want to stay longer. I use state-of-the-art tools and technology to make these outstanding websites come to life.</p>
+                <ul className="flex flex-wrap items-center text-sm text-gray-300 gap-2 my-6 ">
                   <li className="py-1 px-2 rounded-full border border-gray-700">#javascript</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#react.js</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#next.js</li>
@@ -69,7 +69,7 @@ export const Modal = ({ isOpen, setIsOpen }) => {
                   <li className="py-1 px-2 rounded-full border border-gray-700">#github</li>
                   <li className="py-1 px-2 rounded-full border border-gray-700">#terminal</li>
                 </ul>
-                <h2 className="text-2xl text-center md:text-left font-semibold text-blue-500 my-10">MERN STACK</h2>
+                <h2 className="text-2xl text-center md:text-left font-semibold text-blue-500 mb-6 mt-10">MERN STACK</h2>
                 <ul className="w-full flex items-center justify-center md:justify-start gap-9">
                   {mern.map(item => (
                     <Tooltip key={item.id} item={item} />

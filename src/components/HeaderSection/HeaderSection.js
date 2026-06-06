@@ -8,7 +8,7 @@ export const HeaderSection = () => {
   
   const headerSecRef = useRef(null);
   useEffect(() => {
-    // https://stackoverflow.com/questions/61308575/tailwind-h-screen-doesn-t-work-properly-on-mobile-devices
+    //https://css-tricks.com/the-trick-to-viewport-units-on-mobile
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }, []); //eslint-disable-line
