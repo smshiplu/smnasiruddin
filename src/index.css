@@ -4,6 +4,16 @@
 @tailwind utilities;
 
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 100%;
+}
+
 @media screen and (max-width: 768px ) {
   .swiper-button-next::after,
   .swiper-button-prev::after {
