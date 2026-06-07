@@ -21,7 +21,7 @@ html, body, #root {
   }
 }
 
-.tawk-card:nth-child(1) {
+/* .tawk-card:nth-child(1) {
   display: none;
   visibility: hidden;
   opacity: 0;
@@ -29,4 +29,4 @@ html, body, #root {
 
 .tawk-chatinput-container {
   visibility: hidden;
-}
+} */
